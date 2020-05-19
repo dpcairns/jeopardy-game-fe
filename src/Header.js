@@ -8,12 +8,11 @@ export default class Header extends Component {
 
         return (
             <div>
-
-                    <Link to={'./signup'} > Sign Up</Link>
-                    <Link to={'./'} > Login </Link>
-                    <Link to={'./leaderboard'} > LeaderBoard </Link>
-                    <button onClick={() => 
-                    this.props.handleTokenChange('')}>Logout</button>
+                    <p><Link to={'./signup'} > Sign Up</Link></p>
+                    <p><Link to={'./'} > Login </Link></p>
+                    <p><Link to={'./leaderboard'} > LeaderBoard </Link></p>
+                    <p><button onClick={() => 
+                    this.props.handleTokenChange('')}>Logout</button></p>
 
             </div>
         )
