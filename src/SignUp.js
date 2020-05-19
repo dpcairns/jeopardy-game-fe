@@ -12,7 +12,8 @@ export default class SignUp extends Component {
         e.preventDefault();
 
         let tokenData = await request.post(`https://enigmatic-springs-29291.herokuapp.com/auth/signup`, this.state)
-        localStorage.setItem('TOKEN_KEY', tokenData.body.token)
+        this.props.handleTokenChange(tokenData.body.token)
+        
         this.props.history.push('./gamepage')
     }
     
