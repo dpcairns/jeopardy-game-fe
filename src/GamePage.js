@@ -11,19 +11,22 @@ export default class GamePage extends Component {
    componentDidMount = async() => {
        const data = await request.get(`http://jservice.io/api/random?count=1`
        )
-       console.log(data.body[0].category.title)
+       console.log(data.body[0])
        this.setState({ 
-           currentQuestion: data.body[0],
-           title: data.body[0].category.title
+           currentQuestion: data.body[0].question,
+           title: data.body[0].category.title,
+           data: data.body[0]
+
         })
    }
 
     render() {
-       const { currentQuestion, title } = this.state
+       const { data, currentQuestion, title } = this.state
         return (
             <div>
                 <p>{title}</p>
-                <p>{currentQuestion.question}</p>
+                <p>{currentQuestion}</p>
+                <p>{data.answer}</p>
             </div>
         )
     }
