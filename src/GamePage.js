@@ -47,8 +47,6 @@ export default class GamePage extends Component {
                 inputForm: false,
                 questionsAsked: this.state.questionsAsked - 1
             })
-        // put route goes here
-
         
         console.log(this.state);
    }
@@ -67,7 +65,13 @@ export default class GamePage extends Component {
      })
    } 
 
-   handleResultsClick = () => {
+   handleResultsClick = async() => {
+       const resultsObject = {
+           total_score: this.state.score,           
+       }
+       await request.put(`https://enigmatic-springs-29291.herokuapp.com/api/results`, resultsObject)
+       .set('Authorization', this.props.token)
+
        this.props.history.push('./results')
    }
 
