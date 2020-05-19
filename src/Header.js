@@ -12,6 +12,8 @@ export default class Header extends Component {
                     <Link to={'./signup'} > Sign Up</Link>
                     <Link to={'./'} > Login </Link>
                     <Link to={'./leaderboard'} > LeaderBoard </Link>
+                    <button onClick={() => 
+                    this.props.handleTokenChange('')}>Logout</button>
 
             </div>
         )

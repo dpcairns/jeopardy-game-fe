@@ -21,9 +21,6 @@ export default class App extends Component {
       localStorage.setItem('TOKEN_KEY', myToken)
     }
 
-     componentDidMount = () => {
-     } 
-
     render() {
       console.log('yoooo' + this.state.token)
 
@@ -31,7 +28,7 @@ export default class App extends Component {
             <div>
                 <Router>
 
-                  <Header/>
+                  <Header handleTokenChange={this.handleTokenChange}/>
                     <Switch>
 
                         <Route
