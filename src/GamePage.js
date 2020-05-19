@@ -22,8 +22,8 @@ export default class GamePage extends Component {
            currentQuestion: data.body[0].question,
            title: data.body[0].category.title,
            data: data.body[0]
-
         })
+        console.log(this.state.data.category.title)
    }
 
    handleSubmit = (e) => {
@@ -64,6 +64,7 @@ export default class GamePage extends Component {
        const { currentQuestion, title } = this.state
         return (
             <div>
+                <p>Username: {this.props.displayName}</p>
                 <p>Question Number: {this.state.questionsAsked}</p>
                 <p>Score: {this.state.score}</p>
                 {this.state.answeredRight && <p>You got it right!</p>}
@@ -85,7 +86,3 @@ export default class GamePage extends Component {
         )
     }
 }
-
-// {(this.state.answered)
-//                     ? null
-//                     : '/ ' + this.state.pokemon.type_2}</p>

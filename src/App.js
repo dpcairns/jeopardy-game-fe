@@ -13,22 +13,22 @@ import PrivateRoute from './PrivateRoute.js'
 export default class App extends Component {
 
     state = {
-      token: localStorage.getItem('TOKEN_KEY')
+      token: localStorage.getItem('TOKEN_KEY'),
+      displayName: ''
     }
 
-    handleTokenChange = (myToken) => {
-      this.setState({token: myToken})
+    handleTokenChange = (myToken, displayName) => {
+      this.setState({token: myToken,
+                    displayName: displayName})
       localStorage.setItem('TOKEN_KEY', myToken)
     }
 
     render() {
-      console.log('yoooo' + this.state.token)
-
         return (
             <div>
                 <Router>
 
-                  <Header handleTokenChange={this.handleTokenChange}/>
+                  <Header displayName = {this.state.displayName} handleTokenChange={this.handleTokenChange}/>
                     <Switch>
 
                         <Route
@@ -44,7 +44,8 @@ export default class App extends Component {
                         />
                         <PrivateRoute
                             path="/gamepage"
-                            token={this.state.token}                            
+                            token={this.state.token}
+                            displayName={this.state.displayName}                            
                             render={(routerProps) => <GamePage {...routerProps} />}
 
                         />
