@@ -32,43 +32,55 @@ export default class GamePage extends Component {
             this.setState({
                 answeredRight: true,
                 answeredWrong: false,
-                rightAnswer: this.state.score + 1,
-                questionsAsked: this.state.questionsAsked + 1
-
+                score: this.state.score + 1,
             })
         } else {
             this.setState({
                 answeredRight: false,
                 answeredWrong: true,
-                questionsAsked: this.state.questionsAsked + 1
-
-            })
-            this.setState({
-                inputForm: false
-            })
+            })    
         }
+        this.setState({
+                inputForm: false,
+                questionsAsked: this.state.questionsAsked + 1
+            })
         // put route goes here
         console.log(this.state);
-
-        
    }
+   handleClick = async() => {
+    const data = await request.get(`http://jservice.io/api/random?count=1`)
+    console.log(data.body[0])
+    this.setState({ 
+        currentQuestion: data.body[0].question,
+        title: data.body[0].category.title,
+        data: data.body[0],
+        inputForm: true,
+        answeredRight: false,
+        answeredWrong: false
+     })
+   } 
 
     render() {
        const { currentQuestion, title } = this.state
         return (
             <div>
+                <p>Question Number: {this.state.questionsAsked}</p>
+                <p>Score: {this.state.score}</p>
                 {this.state.answeredRight && <p>You got it right!</p>}
-                {this.state.answeredWrong && <p>Tough break, you got it wrong!</p>}
-                <p>{title}</p>
-                <p>{currentQuestion}</p>
-                {(this.state.inputForm) ? <form onSubmit={this.handleSubmit}>
+                {this.state.answeredWrong && <p>Tough break, you got it wrong!
+                    The answer was {this.state.data.answer}</p>}
+                
+                {(this.state.inputForm) ? 
+                <form onSubmit={this.handleSubmit}>
+                    <p>Category: {title}</p>
+                    <p>Question: {currentQuestion}</p>
                     <label>
                         <input name='answer' onChange={(e) => this.setState({answerInput: e.target.value})}></input>
                     </label>
                     <button>Submit Answer</button>
                     </form>
                 :
-                <button>Next Question</button>}
+                <button onClick={this.handleClick}>Next Question</button>}
             </div>
         )
     }
