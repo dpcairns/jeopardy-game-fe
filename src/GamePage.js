@@ -11,7 +11,8 @@ export default class GamePage extends Component {
        score: 0,
        answeredRight: false,
        answeredWrong: false,
-       inputForm: true
+       inputForm: true,
+       username: this.props.displayName
    }
    
    componentDidMount = async() => {
@@ -28,7 +29,8 @@ export default class GamePage extends Component {
 
    handleSubmit = (e) => {
         e.preventDefault();
-        if(this.state.answerInput === this.state.data.answer) {
+            
+        if(this.state.data.answer.toLowerCase() === this.state.answerInput.toLowerCase()) {
             this.setState({
                 answeredRight: true,
                 answeredWrong: false,
@@ -61,10 +63,10 @@ export default class GamePage extends Component {
    } 
 
     render() {
-       const { currentQuestion, title } = this.state
+       const { currentQuestion, title, username } = this.state
         return (
             <div>
-                <p>Username: {this.props.displayName}</p>
+                <p>Username: {username}</p>
                 <p>Question Number: {this.state.questionsAsked}</p>
                 <p>Score: {this.state.score}</p>
                 {this.state.answeredRight && <p>You got it right!</p>}
