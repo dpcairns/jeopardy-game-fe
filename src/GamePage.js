@@ -18,6 +18,7 @@ export default class GamePage extends Component {
    
    componentDidMount = async() => {
        let data = await request.get(`http://jservice.io/api/random?count=1`)
+       const removeSpecialRegex = /<[^>]*>/g
 
         while(data.body[0].question === ''){
             data = await request.get(`http://jservice.io/api/random?count=1`)
@@ -26,7 +27,7 @@ export default class GamePage extends Component {
         console.log(data.body[0].answer)
 
         if(data.body[0].answer.includes('<')){
-          data.body[0].answer = data.body[0].answer.slice(3, data.body[0].answer.length - 4)
+          data.body[0].answer = data.body[0].answer.replace(removeSpecialRegex, "")
         }
 
        this.setState({ 
@@ -63,6 +64,7 @@ export default class GamePage extends Component {
    
    handleClick = async() => {
     let data = await request.get(`http://jservice.io/api/random?count=1`)
+    const removeSpecialRegex = /<[^>]*>/g
     console.log(data.body[0])
 
     while(data.body[0].question === ''){
@@ -72,7 +74,8 @@ export default class GamePage extends Component {
     console.log(data.body[0].answer)
 
     if(data.body[0].answer.includes('<')){
-      data.body[0].answer = data.body[0].answer.slice(3, data.body[0].answer.length - 4)
+      data.body[0].answer = data.body[0].answer = data.body[0].answer
+      .replace(removeSpecialRegex, "")
     }
 
     this.setState({ 
