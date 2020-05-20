@@ -17,9 +17,18 @@ export default class GamePage extends Component {
 
    
    componentDidMount = async() => {
-       const data = await request.get(`http://jservice.io/api/random?count=1`
-       )
-       console.log(data.body[0])
+       let data = await request.get(`http://jservice.io/api/random?count=1`)
+
+        while(data.body[0].question === ''){
+            data = await request.get(`http://jservice.io/api/random?count=1`)
+        }
+
+        console.log(data.body[0].answer)
+
+        if(data.body[0].answer.includes('<')){
+          data.body[0].answer = data.body[0].answer.slice(3, data.body[0].answer.length - 4)
+        }
+
        this.setState({ 
            currentQuestion: data.body[0].question,
            title: data.body[0].category.title,
@@ -53,8 +62,19 @@ export default class GamePage extends Component {
 
    
    handleClick = async() => {
-    const data = await request.get(`http://jservice.io/api/random?count=1`)
+    let data = await request.get(`http://jservice.io/api/random?count=1`)
     console.log(data.body[0])
+
+    while(data.body[0].question === ''){
+        data = await request.get(`http://jservice.io/api/random?count=1`)
+    }
+    
+    console.log(data.body[0].answer)
+
+    if(data.body[0].answer.includes('<')){
+      data.body[0].answer = data.body[0].answer.slice(3, data.body[0].answer.length - 4)
+    }
+
     this.setState({ 
         currentQuestion: data.body[0].question,
         title: data.body[0].category.title,
@@ -72,7 +92,10 @@ export default class GamePage extends Component {
        await request.put(`https://enigmatic-springs-29291.herokuapp.com/api/results`, resultsObject)
        .set('Authorization', this.props.token)
 
+       localStorage.setItem('SCORE_KEY', JSON.stringify(this.state.score))
+       console.log(localStorage.getItem('SCORE_KEY'))
        this.props.history.push('./results')
+
    }
 
     render() {
