@@ -23,7 +23,7 @@ export default class DetailPage extends Component {
         return (
             <div>
                     
-                <div>
+                <div className='user-profile'>
                    <p> {'Name: ' + name } </p>
                    <p>  {'Games Played: ' + games_played } </p>
                    <p> {'Total Score: ' + total_score } </p>

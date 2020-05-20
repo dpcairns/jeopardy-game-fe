@@ -21,11 +21,11 @@ export default class ResultsPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className='results-box'>
                 <p> Score: { this.state.score }/10</p>
                 <p> All-Time Score: { this.state.allTimeScore }</p>
                 <p> Games Played: { this.state.gamesPlayed }</p>
-                <button onClick={() => this.props.history.push('./gamepage')}>Play Again?</button>
+                <button className='play-again-button' onClick={() => this.props.history.push('./gamepage')}>Again?</button>
             </div>
         )
     }

@@ -21,10 +21,11 @@ export default class Leaderboard extends Component {
             <div>
 
                 { this.state.leaderboardData.map(item => {
-                     return <div>
-                              <Link to={`/detailpage/${item.id}`}> <p> Name: {item.name} </p> </Link>                  
+                     return <div className='leaderboard'>
+                              <Link to={`/detailpage/${item.id}`}> <p>{item.name} </p>                   
                                 <p> Games Played: {item.games_played} </p>
                                 <p> Total Score: {item.total_score} </p> 
+                                </Link>
                             </div>
                 }) 
                 }

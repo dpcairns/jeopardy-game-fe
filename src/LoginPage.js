@@ -21,15 +21,11 @@ export default class LoginPage extends Component {
     render() {
         // console.log(this.state)
         return (
-            <div className='loginContainer'>
-                <div className='title-container'>
-                    <p className='title'>JEOPARDY!</p>
-                    <p className='title'>LITE</p>
-                </div>
+            <div className='login-container'>
                 <div className='rules-container'>
                     Jeopardy Lite is based off of the long-running game show, Jeopardy! You will be asked ten questions. The answers do not have to be in question form, and are not case sensitive (spelling does matter though, so be careful).
                 </div>
-                <form className='loginForm' onSubmit={this.handleSubmit} >
+                <form className='login-form' onSubmit={this.handleSubmit} >
                     <label>
                         Email:
                         <input onChange={ (e)=> this.setState({email: e.target.value}) } ></input>

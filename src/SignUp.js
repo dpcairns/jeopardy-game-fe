@@ -25,8 +25,7 @@ export default class SignUp extends Component {
         console.log(this.state)
         return (
             <div>
-                
-                <form onSubmit={this.handleSubmit} >
+                <form className='sign-up-form' onSubmit={this.handleSubmit} >
                     <label>
                         Email:
                         <input onChange={ (e)=> this.setState({email: e.target.value}) } ></input>
@@ -40,7 +39,7 @@ export default class SignUp extends Component {
                         <input onChange={ (e)=> this.setState({display_name: e.target.value}) } ></input>
                     </label>
 
-                    <button>Sign Up</button>
+                    <button className='sign-up-button'>Sign Up</button>
                    
                 </form>
 
