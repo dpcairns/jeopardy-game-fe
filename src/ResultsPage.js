@@ -26,8 +26,7 @@ export default class ResultsPage extends Component {
                 <p> Score: { this.state.score }/10</p>
                 <p> All-Time Score: { this.state.allTimeScore }</p>
                 <p> Games Played: { this.state.gamesPlayed }</p>
-
-                
+               
             </div>
         )
     }
