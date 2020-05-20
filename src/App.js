@@ -9,6 +9,7 @@ import SignUp from './SignUp.js';
 import GamePage from './GamePage.js'
 import Header from './Header.js'
 import PrivateRoute from './PrivateRoute.js'
+import ResultsPage from './ResultsPage.js'
 
 export default class App extends Component {
 
@@ -47,6 +48,13 @@ export default class App extends Component {
                             token={this.state.token}
                             displayName={this.state.displayName}                            
                             render={(routerProps) => <GamePage {...routerProps} />}
+
+                        />
+                        <PrivateRoute
+                            path="/results"
+                            token={this.state.token}
+                            displayName={this.state.displayName}                            
+                            render={(routerProps) => <ResultsPage {...routerProps} />}
 
                         />
 

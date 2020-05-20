@@ -13,6 +13,10 @@ export default class SignUp extends Component {
 
         let tokenData = await request.post(`https://enigmatic-springs-29291.herokuapp.com/auth/signup`, this.state)
         this.props.handleTokenChange(tokenData.body.token, tokenData.body.display_name)
+
+        await request.post(`https://enigmatic-springs-29291.herokuapp.com/api/results`)
+        .set(`Authorization`, tokenData.body.token)
+
         this.props.history.push('./gamepage')
     }
     

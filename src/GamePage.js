@@ -7,12 +7,14 @@ export default class GamePage extends Component {
        currentQuestion: '',
        title: '',
        answerInput: '',
-       questionsAsked: 0,
+       questionsAsked: 10,
        score: 0,
        answeredRight: false,
        answeredWrong: false,
-       inputForm: true
+       inputForm: true,
+       username: this.props.displayName
    }
+
    
    componentDidMount = async() => {
        const data = await request.get(`http://jservice.io/api/random?count=1`
@@ -26,9 +28,10 @@ export default class GamePage extends Component {
         console.log(this.state.data.category.title)
    }
 
-   handleSubmit = (e) => {
+   handleSubmit = async(e) => {
         e.preventDefault();
-        if(this.state.answerInput === this.state.data.answer) {
+            
+        if(this.state.data.answer.toLowerCase() === this.state.answerInput.toLowerCase()) {
             this.setState({
                 answeredRight: true,
                 answeredWrong: false,
@@ -42,11 +45,13 @@ export default class GamePage extends Component {
         }
         this.setState({
                 inputForm: false,
-                questionsAsked: this.state.questionsAsked + 1
+                questionsAsked: this.state.questionsAsked - 1
             })
-        // put route goes here
+        
         console.log(this.state);
    }
+
+   
    handleClick = async() => {
     const data = await request.get(`http://jservice.io/api/random?count=1`)
     console.log(data.body[0])
@@ -60,12 +65,22 @@ export default class GamePage extends Component {
      })
    } 
 
+   handleResultsClick = async() => {
+       const resultsObject = {
+           total_score: this.state.score,           
+       }
+       await request.put(`https://enigmatic-springs-29291.herokuapp.com/api/results`, resultsObject)
+       .set('Authorization', this.props.token)
+
+       this.props.history.push('./results')
+   }
+
     render() {
-       const { currentQuestion, title } = this.state
+       const { currentQuestion, title, username } = this.state
         return (
             <div>
-                <p>Username: {this.props.displayName}</p>
-                <p>Question Number: {this.state.questionsAsked}</p>
+                <p>Username: {username}</p>
+                <p>Questions Left: {this.state.questionsAsked}</p>
                 <p>Score: {this.state.score}</p>
                 {this.state.answeredRight && <p>You got it right!</p>}
                 {this.state.answeredWrong && <p>Tough break, you got it wrong!
@@ -80,8 +95,7 @@ export default class GamePage extends Component {
                     </label>
                     <button>Submit Answer</button>
                     </form>
-                :
-                <button onClick={this.handleClick}>Next Question</button>}
+                :  this.state.questionsAsked > 0 ? <button onClick={this.handleClick}>Next Question</button> : <button onClick={this.handleResultsClick} >See Results</button>}
             </div>
         )
     }
