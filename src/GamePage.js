@@ -72,7 +72,10 @@ export default class GamePage extends Component {
        await request.put(`https://enigmatic-springs-29291.herokuapp.com/api/results`, resultsObject)
        .set('Authorization', this.props.token)
 
+       localStorage.setItem('SCORE_KEY', JSON.stringify(this.state.score))
+       console.log(localStorage.getItem('SCORE_KEY'))
        this.props.history.push('./results')
+
    }
 
     render() {

@@ -10,6 +10,7 @@ import GamePage from './GamePage.js'
 import Header from './Header.js'
 import PrivateRoute from './PrivateRoute.js'
 import ResultsPage from './ResultsPage.js'
+import Leaderboard from './Leaderboard.js'
 
 export default class App extends Component {
 
@@ -43,6 +44,14 @@ export default class App extends Component {
                             render={(routerProps) => <SignUp handleTokenChange={this.handleTokenChange} {...routerProps} />}
 
                         />
+
+                        <Route
+                            path="/leaderboard"
+                            exact
+                            render={(routerProps) => <Leaderboard  {...routerProps} />}
+
+                        />
+                        
                         <PrivateRoute
                             path="/gamepage"
                             token={this.state.token}
