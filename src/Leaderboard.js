@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent'
+import { Link } from 'react-router-dom'
 
 export default class Leaderboard extends Component {
 
@@ -20,12 +21,13 @@ export default class Leaderboard extends Component {
             <div>
 
                 { this.state.leaderboardData.map(item => {
-                     return <div><p> Name: {item.name} </p>
-                     
-                     <p> Games Played: {item.games_played} </p>
-                     <p> Total Score: {item.total_score} </p> 
-                     </div>
-                }) }
+                     return <div>
+                              <Link to={`/detailpage/${item.id}`}> <p> Name: {item.name} </p> </Link>                  
+                                <p> Games Played: {item.games_played} </p>
+                                <p> Total Score: {item.total_score} </p> 
+                            </div>
+                }) 
+                }
                 
             </div>
         )

@@ -11,6 +11,7 @@ import Header from './Header.js'
 import PrivateRoute from './PrivateRoute.js'
 import ResultsPage from './ResultsPage.js'
 import Leaderboard from './Leaderboard.js'
+import DetailPage from './DetailPage'
 
 export default class App extends Component {
 
@@ -49,6 +50,13 @@ export default class App extends Component {
                             path="/leaderboard"
                             exact
                             render={(routerProps) => <Leaderboard  {...routerProps} />}
+
+                        />
+
+                        <Route
+                            path="/detailpage/:id"
+                            exact
+                            render={(routerProps) => <DetailPage  {...routerProps} />}
 
                         />
                         
