@@ -18,6 +18,7 @@ export default class GamePage extends Component {
    
    componentDidMount = async() => {
        let data = await request.get(`http://jservice.io/api/random?count=1`)
+       const removeSpecialRegex = /<[^>]*>/g
 
         while(data.body[0].question === ''){
             data = await request.get(`http://jservice.io/api/random?count=1`)
@@ -26,7 +27,7 @@ export default class GamePage extends Component {
         console.log(data.body[0].answer)
 
         if(data.body[0].answer.includes('<')){
-          data.body[0].answer = data.body[0].answer.slice(3, data.body[0].answer.length - 4)
+          data.body[0].answer = data.body[0].answer.replace(removeSpecialRegex, "")
         }
 
        this.setState({ 
@@ -63,6 +64,7 @@ export default class GamePage extends Component {
    
    handleClick = async() => {
     let data = await request.get(`http://jservice.io/api/random?count=1`)
+    const removeSpecialRegex = /<[^>]*>/g
     console.log(data.body[0])
 
     while(data.body[0].question === ''){
@@ -72,7 +74,8 @@ export default class GamePage extends Component {
     console.log(data.body[0].answer)
 
     if(data.body[0].answer.includes('<')){
-      data.body[0].answer = data.body[0].answer.slice(3, data.body[0].answer.length - 4)
+      data.body[0].answer = data.body[0].answer = data.body[0].answer
+      .replace(removeSpecialRegex, "")
     }
 
     this.setState({ 
@@ -101,24 +104,29 @@ export default class GamePage extends Component {
     render() {
        const { currentQuestion, title, username } = this.state
         return (
-            <div>
-                <p>Username: {username}</p>
-                <p>Questions Left: {this.state.questionsAsked}</p>
-                <p>Score: {this.state.score}</p>
+            <div className='game-form'>
+                <div className='current-game-data'>
+                    <p>Questions Left: {this.state.questionsAsked}</p>
+                    <p>Score: {this.state.score}</p>
+                </div>
+            <div className='result-text'>
                 {this.state.answeredRight && <p>You got it right!</p>}
                 {this.state.answeredWrong && <p>Tough break, you got it wrong!
                     The answer was {this.state.data.answer}</p>}
-                
+            </div>
                 {(this.state.inputForm) ? 
                 <form onSubmit={this.handleSubmit}>
-                    <p>Category: {title}</p>
-                    <p>Question: {currentQuestion}</p>
+                    <div className='question-box'>
+                        <p>Category: {title}</p>
+                        <p>Question: {currentQuestion}</p>
+                    </div>
                     <label>
+                        <p>{username}, what is your answer?</p>
                         <input name='answer' onChange={(e) => this.setState({answerInput: e.target.value})}></input>
                     </label>
-                    <button>Submit Answer</button>
+                    <button className="game-page-button">Answer</button>
                     </form>
-                :  this.state.questionsAsked > 0 ? <button onClick={this.handleClick}>Next Question</button> : <button onClick={this.handleResultsClick} >See Results</button>}
+                :  this.state.questionsAsked > 0 ? <button className="game-page-button" onClick={this.handleClick}>Next</button> : <button className="game-page-button" onClick={this.handleResultsClick} >Results</button>}
             </div>
         )
     }

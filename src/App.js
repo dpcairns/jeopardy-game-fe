@@ -12,6 +12,7 @@ import PrivateRoute from './PrivateRoute.js'
 import ResultsPage from './ResultsPage.js'
 import Leaderboard from './Leaderboard.js'
 import DetailPage from './DetailPage'
+import './App.css'
 
 export default class App extends Component {
 

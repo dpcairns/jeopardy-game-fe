@@ -11,10 +11,9 @@ export default class ResultsPage extends Component {
 
 
     componentDidMount = async() => {
-
-
         const data = await request.get(`https://enigmatic-springs-29291.herokuapp.com/api/results/`)
-                                  .set('Authorization', localStorage.getItem('TOKEN_KEY')) 
+                                  .set('Authorization', localStorage.getItem('TOKEN_KEY'))
+                console.log(data)
         this.setState({ allTimeScore: data.body[0].total_score,
                         gamesPlayed: data.body[0].games_played
         })                          
@@ -22,11 +21,11 @@ export default class ResultsPage extends Component {
 
     render() {
         return (
-            <div>
+            <div className='results-box'>
                 <p> Score: { this.state.score }/10</p>
                 <p> All-Time Score: { this.state.allTimeScore }</p>
                 <p> Games Played: { this.state.gamesPlayed }</p>
-               
+                <button className='play-again-button' onClick={() => this.props.history.push('./gamepage')}>Again?</button>
             </div>
         )
     }
