@@ -14,6 +14,8 @@ import Leaderboard from './Leaderboard.js'
 import DetailPage from './DetailPage'
 import './App.css'
 import './Desktop.css'
+import './AboutMe.js'
+import AboutMe from './AboutMe.js';
 
 export default class App extends Component {
 
@@ -59,6 +61,12 @@ export default class App extends Component {
                             path="/detailpage/:id"
                             exact
                             render={(routerProps) => <DetailPage  {...routerProps} />}
+
+                        />
+                        <Route
+                            path="/aboutme"
+                            exact
+                            render={(routerProps) => <AboutMe  {...routerProps} />}
 
                         />
                         
