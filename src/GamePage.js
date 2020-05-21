@@ -41,7 +41,7 @@ export default class GamePage extends Component {
    handleSubmit = async(e) => {
         e.preventDefault();
             
-        if(this.state.data.answer.toLowerCase() === this.state.answerInput.toLowerCase()) {
+        if(this.state.answerInput.toLowerCase().includes(this.state.data.answer.toLowerCase())) {
             this.setState({
                 answeredRight: true,
                 answeredWrong: false,
