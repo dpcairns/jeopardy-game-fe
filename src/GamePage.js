@@ -38,10 +38,35 @@ export default class GamePage extends Component {
         console.log(this.state.data.category.title)
    }
 
+   checkAnswer = (userInput, answer) => {
+       let rightAnswer = true;
+       const regexSpecial = /[^\w\s/']/g;
+       const splitInput = userInput.toLowerCase()
+        .replace('the ', '')
+        .replace('and ', '')
+        .replace('an ', '')
+        .replace('a ', '')
+        .split(' ')
+       const splitAnswer = answer.toLowerCase()
+        .replace('&', 'and')
+        .replace('an ', '')
+        .replace('a ', '')
+        .replace('the ', '')
+        .replace(regexSpecial, '')
+        .split(' ')
+       
+        console.log(splitInput, splitAnswer);
+       splitInput.forEach(word => {
+           if(!splitAnswer.includes(word)) {
+               rightAnswer = false;
+           }
+       })
+     return rightAnswer;
+   }
+
    handleSubmit = async(e) => {
         e.preventDefault();
-            
-        if(this.state.answerInput.toLowerCase().includes(this.state.data.answer.toLowerCase())) {
+        if(this.checkAnswer(this.state.answerInput, this.state.data.answer)) {
             this.setState({
                 answeredRight: true,
                 answeredWrong: false,
