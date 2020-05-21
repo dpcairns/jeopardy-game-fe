@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/jeopardy-game-fe/static/css/main.e7b6b4f9.chunk.css",
-    "main.js": "/jeopardy-game-fe/static/js/main.de40e447.chunk.js",
-    "main.js.map": "/jeopardy-game-fe/static/js/main.de40e447.chunk.js.map",
-    "runtime-main.js": "/jeopardy-game-fe/static/js/runtime-main.2f2f362a.js",
-    "runtime-main.js.map": "/jeopardy-game-fe/static/js/runtime-main.2f2f362a.js.map",
-    "static/js/2.2a4e2dd2.chunk.js": "/jeopardy-game-fe/static/js/2.2a4e2dd2.chunk.js",
-    "static/js/2.2a4e2dd2.chunk.js.map": "/jeopardy-game-fe/static/js/2.2a4e2dd2.chunk.js.map",
-    "index.html": "/jeopardy-game-fe/index.html",
-    "precache-manifest.da83cc70dd8158c564845e8e61b865f8.js": "/jeopardy-game-fe/precache-manifest.da83cc70dd8158c564845e8e61b865f8.js",
-    "service-worker.js": "/jeopardy-game-fe/service-worker.js",
-    "static/css/main.e7b6b4f9.chunk.css.map": "/jeopardy-game-fe/static/css/main.e7b6b4f9.chunk.css.map",
-    "static/js/2.2a4e2dd2.chunk.js.LICENSE.txt": "/jeopardy-game-fe/static/js/2.2a4e2dd2.chunk.js.LICENSE.txt"
+    "main.css": "/jeopardy-game-fe/login/static/css/main.e7b6b4f9.chunk.css",
+    "main.js": "/jeopardy-game-fe/login/static/js/main.261667a1.chunk.js",
+    "main.js.map": "/jeopardy-game-fe/login/static/js/main.261667a1.chunk.js.map",
+    "runtime-main.js": "/jeopardy-game-fe/login/static/js/runtime-main.30724397.js",
+    "runtime-main.js.map": "/jeopardy-game-fe/login/static/js/runtime-main.30724397.js.map",
+    "static/js/2.2a4e2dd2.chunk.js": "/jeopardy-game-fe/login/static/js/2.2a4e2dd2.chunk.js",
+    "static/js/2.2a4e2dd2.chunk.js.map": "/jeopardy-game-fe/login/static/js/2.2a4e2dd2.chunk.js.map",
+    "index.html": "/jeopardy-game-fe/login/index.html",
+    "precache-manifest.b979a67285c2d9a03e2b9880a1b4c3a4.js": "/jeopardy-game-fe/login/precache-manifest.b979a67285c2d9a03e2b9880a1b4c3a4.js",
+    "service-worker.js": "/jeopardy-game-fe/login/service-worker.js",
+    "static/css/main.e7b6b4f9.chunk.css.map": "/jeopardy-game-fe/login/static/css/main.e7b6b4f9.chunk.css.map",
+    "static/js/2.2a4e2dd2.chunk.js.LICENSE.txt": "/jeopardy-game-fe/login/static/js/2.2a4e2dd2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2f2f362a.js",
+    "static/js/runtime-main.30724397.js",
     "static/js/2.2a4e2dd2.chunk.js",
     "static/css/main.e7b6b4f9.chunk.css",
-    "static/js/main.de40e447.chunk.js"
+    "static/js/main.261667a1.chunk.js"
   ]
 }
