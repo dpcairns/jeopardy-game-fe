@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/jeopardy-game-fe/login/static/css/main.e7b6b4f9.chunk.css",
-    "main.js": "/jeopardy-game-fe/login/static/js/main.261667a1.chunk.js",
-    "main.js.map": "/jeopardy-game-fe/login/static/js/main.261667a1.chunk.js.map",
-    "runtime-main.js": "/jeopardy-game-fe/login/static/js/runtime-main.30724397.js",
-    "runtime-main.js.map": "/jeopardy-game-fe/login/static/js/runtime-main.30724397.js.map",
-    "static/js/2.2a4e2dd2.chunk.js": "/jeopardy-game-fe/login/static/js/2.2a4e2dd2.chunk.js",
-    "static/js/2.2a4e2dd2.chunk.js.map": "/jeopardy-game-fe/login/static/js/2.2a4e2dd2.chunk.js.map",
-    "index.html": "/jeopardy-game-fe/login/index.html",
-    "precache-manifest.b979a67285c2d9a03e2b9880a1b4c3a4.js": "/jeopardy-game-fe/login/precache-manifest.b979a67285c2d9a03e2b9880a1b4c3a4.js",
-    "service-worker.js": "/jeopardy-game-fe/login/service-worker.js",
-    "static/css/main.e7b6b4f9.chunk.css.map": "/jeopardy-game-fe/login/static/css/main.e7b6b4f9.chunk.css.map",
-    "static/js/2.2a4e2dd2.chunk.js.LICENSE.txt": "/jeopardy-game-fe/login/static/js/2.2a4e2dd2.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.e7b6b4f9.chunk.css",
+    "main.js": "/static/js/main.c937c818.chunk.js",
+    "main.js.map": "/static/js/main.c937c818.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4a7bdfd9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4a7bdfd9.js.map",
+    "static/js/2.2a4e2dd2.chunk.js": "/static/js/2.2a4e2dd2.chunk.js",
+    "static/js/2.2a4e2dd2.chunk.js.map": "/static/js/2.2a4e2dd2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.37966fbdf070dcf22480d4d9c565ae3d.js": "/precache-manifest.37966fbdf070dcf22480d4d9c565ae3d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e7b6b4f9.chunk.css.map": "/static/css/main.e7b6b4f9.chunk.css.map",
+    "static/js/2.2a4e2dd2.chunk.js.LICENSE.txt": "/static/js/2.2a4e2dd2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.30724397.js",
+    "static/js/runtime-main.4a7bdfd9.js",
     "static/js/2.2a4e2dd2.chunk.js",
     "static/css/main.e7b6b4f9.chunk.css",
-    "static/js/main.261667a1.chunk.js"
+    "static/js/main.c937c818.chunk.js"
   ]
 }
