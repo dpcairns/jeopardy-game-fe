@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import request from 'superagent'
 import { Link } from 'react-router-dom'
+import { getLeaderboard } from './Api-Calls'
 
 export default class Leaderboard extends Component {
 
@@ -9,11 +9,8 @@ export default class Leaderboard extends Component {
     }
 
     componentDidMount = async() => {
-        const data = await request.get(`https://enigmatic-springs-29291.herokuapp.com/leaderboard`)
-        const sortedData = data.body
-        .filter (item => !isNaN(item.total_score / item.games_played))
-        .sort((a, b) => (b.total_score / b.games_played) - (a.total_score / a.games_played));
-        this.setState({ leaderboardData: sortedData })
+        const data = await getLeaderboard(this.state)
+        this.setState({ leaderboardData: data })
     }
 
     render() {

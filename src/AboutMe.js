@@ -26,7 +26,7 @@ export default class AboutMe extends Component {
                 </p>
                 <p>
                     <h2>Dan Bennington</h2>
-                    <img src="dan.jpg" alt="developer"/>
+                    <img src="dan.jpg" alt="developer" ahref="https://www.linkedin.com/in/dan-bennington-4070451a5"/>
                     <p>Dan enjoys motorcycles, going on hikes, watching and playing 
                         basketball (go Blazers and Lakers!), lifting heavy objects
                          at the gym and developing software. When not working on new 
