@@ -17,11 +17,11 @@ export default class GamePage extends Component {
 
    
    componentDidMount = async() => {
-       let data = await request.get(`http://jservice.io/api/random?count=1`)
+       let data = await request.get(`https://jservice.io/api/random?count=1`)
        const removeSpecialRegex = /<[^>]*>/g
 
         while(data.body[0].question === ''){
-            data = await request.get(`http://jservice.io/api/random?count=1`)
+            data = await request.get(`https://jservice.io/api/random?count=1`)
         }
 
         console.log(data.body[0].answer)
@@ -63,12 +63,12 @@ export default class GamePage extends Component {
 
    
    handleClick = async() => {
-    let data = await request.get(`http://jservice.io/api/random?count=1`)
+    let data = await request.get(`https://jservice.io/api/random?count=1`)
     const removeSpecialRegex = /<[^>]*>/g
     console.log(data.body[0])
 
     while(data.body[0].question === ''){
-        data = await request.get(`http://jservice.io/api/random?count=1`)
+        data = await request.get(`https://jservice.io/api/random?count=1`)
     }
     
     console.log(data.body[0].answer)
