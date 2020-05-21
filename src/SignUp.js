@@ -32,7 +32,7 @@ export default class SignUp extends Component {
                     </label>
                     <label>
                         Password:
-                        <input onChange={ (e)=> this.setState({password: e.target.value}) } ></input>
+                        <input type='password' onChange={ (e)=> this.setState({password: e.target.value}) } ></input>
                     </label>
                     <label>
                         Username:
