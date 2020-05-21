@@ -37,6 +37,7 @@ export default class Header extends Component {
                     <p><Link to={'/leaderboard'} onClick={this.closeNav}> LeaderBoard </Link></p>
                     <p><Link to={'/gamepage'} onClick={this.closeNav}> Play Game </Link></p>
                     <p><Link to={'/'} onClick={this.handleLogout}>Logout</Link></p>
+                    <p><Link to={'/aboutme'}onClick={this.closeNav}>About Me</Link></p>
                 </div>
             </div>
         )
