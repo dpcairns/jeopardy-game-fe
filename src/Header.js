@@ -31,7 +31,7 @@ export default class Header extends Component {
                     <p className='title'>LITE</p>
                 </div>
                 <div className='header' style={{ width: this.state.width }}>
-                    <a href='javascript:void(0)' className="close-button" onClick={this.closeNav}>&times;</a>
+                    <Link className="close-button" onClick={this.closeNav}>&times;</Link>
                     <p><Link to={'/signup'} onClick={this.closeNav}> Sign Up</Link></p>
                     <p><Link to={'/'} onClick={this.closeNav}> Login </Link></p>
                     <p><Link to={'/leaderboard'} onClick={this.closeNav}> LeaderBoard </Link></p>

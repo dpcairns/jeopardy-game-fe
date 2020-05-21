@@ -1,3 +1,8 @@
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
 body {
   background-color: #0000ff;
   color: white;
@@ -186,3 +191,5 @@ label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-prof
 .user-profile {
   margin: 100px auto;
 }
+}
+

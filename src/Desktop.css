@@ -1,0 +1,201 @@
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    body {
+      background-color: #0000ff;
+      color: white;
+    }
+    
+    a {
+      color: white;
+    }
+    
+    input {
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    /* header styles */
+    .header {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .open-button {
+      font-size:30px;
+      cursor: pointer
+    }
+    
+    .close-button {
+      size: 20px;
+    }
+    
+    .header a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      /**/
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .header a:hover {
+      color: #f1f1f1;
+    }
+    
+    .header .close-button {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      font-size: 50px;
+      margin-left: 50px;
+    }
+    /*for side menu*/
+    @media screen and (max-height: 450px) {
+      .header {padding-top: 15px;}
+      .header a {font-size: 18px;}
+    }
+    
+    
+    /* Login Styles */
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .title {
+      text-align: center;
+      text-shadow: 4px 1px black;
+      font-size: 60px;
+      margin: 0;
+    }
+    
+    .login-form, label, .sign-up-form, .game-form, .results-box, .user-profile {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: auto;
+      width: 70%;
+    }
+    
+    .rules-container {
+      margin: 55px auto;
+      width: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px black;
+    }
+    
+    .login-button, .sign-up-button, .game-page-button, .play-again-button {
+      height: 50px;
+      font-size: 30px;
+      box-shadow: 1px 2px 2px 2px;
+      border-radius: 10px;
+      border: 1px solid black;
+      width: 20%;
+      margin: 20px auto;
+      transition: .05s;
+      cursor: pointer;
+    }
+    
+    .login-button:active {
+      transform: scale(.95)
+    }
+ 
+    input {
+      width: 40%;
+      box-shadow: 1px 2px 2px 1px;
+      border-radius: 10px;
+      border: 1px solid black;
+      margin: 5px auto;
+    }
+    
+    label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-profile {
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px black;
+    }
+    
+    
+    /* sign up page*/
+    .sign-up-form {
+      margin: 100px auto;
+    }
+    
+    .sign-up-form input {
+      margin: 20px auto;
+    }
+    
+    .sign-up-button {
+      margin: 40px auto;
+    }
+    
+    .sign-up-button:active {
+      transform: scale(.95)
+    }
+    
+    /* gamepage */
+    
+    .game-page-button:active {
+      transform: scale(.95)
+    }
+    
+    .question-box {
+      width: 30%;
+      border: 3px solid white;
+      padding: 30px;
+      margin: 10px auto;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px black;
+    }
+    
+    /*leaderboard*/
+    .leaderboard, .user-profile {
+      border: 3px solid white;
+      padding: 30px;
+      margin: 30px auto;
+      width: 30%;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px black;
+      transition: .3s
+    }
+    
+    .leaderboard:active {
+      transform: scale(.95)
+    }
+    
+    .leaderboard:hover {
+      background-color: lime;
+    }
+    
+    .leaderboard a {
+      text-decoration: none;
+    }
+    
+    /* player details page */
+    
+    .user-profile {
+      margin: 100px auto;
+    }
+
+    .sign-up-text {
+      margin-bottom: 30px;
+    }
+
+  }

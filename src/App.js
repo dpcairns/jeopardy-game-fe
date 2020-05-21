@@ -13,6 +13,7 @@ import ResultsPage from './ResultsPage.js'
 import Leaderboard from './Leaderboard.js'
 import DetailPage from './DetailPage'
 import './App.css'
+import './Desktop.css'
 
 export default class App extends Component {
 

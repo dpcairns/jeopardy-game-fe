@@ -32,7 +32,7 @@ export default class LoginPage extends Component {
                     </label>
                     <label>
                         Password:
-                        <input onChange={ (e)=> this.setState({password: e.target.value}) } ></input>
+                        <input type='password' onChange={ (e)=> this.setState({password: e.target.value}) } ></input>
                     </label>
                     <button className = 'login-button'>Login</button>
                     <div className='sign-up-text'>
