@@ -92,7 +92,8 @@
     }
     
     .rules-container {
-      margin: 55px;
+      margin: 55px auto;
+      width: 50%;
       font-size: 20px;
       font-weight: bold;
       text-align: center;
@@ -105,7 +106,7 @@
       box-shadow: 1px 2px 2px 2px;
       border-radius: 10px;
       border: 1px solid black;
-      width: 50%;
+      width: 20%;
       margin: 20px auto;
       transition: .05s;
       cursor: pointer;
@@ -114,13 +115,13 @@
     .login-button:active {
       transform: scale(.95)
     }
-    
+ 
     input {
-      
+      width: 40%;
       box-shadow: 1px 2px 2px 1px;
       border-radius: 10px;
       border: 1px solid black;
-      margin: 5px;
+      margin: 5px auto;
     }
     
     label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-profile {
@@ -134,7 +135,6 @@
     .sign-up-form {
       margin: 100px auto;
     }
-    
     
     .sign-up-form input {
       margin: 20px auto;
@@ -155,9 +155,10 @@
     }
     
     .question-box {
+      width: 30%;
       border: 3px solid white;
       padding: 30px;
-      margin: 10px;
+      margin: 10px auto;
       font-weight: bold;
       text-align: center;
       text-shadow: 2px 2px black;
@@ -167,12 +168,12 @@
     .leaderboard, .user-profile {
       border: 3px solid white;
       padding: 30px;
-      margin: 30px;
+      margin: 30px auto;
+      width: 30%;
       font-weight: bold;
       text-align: center;
       text-shadow: 2px 2px black;
       transition: .3s
-    
     }
     
     .leaderboard:active {
@@ -193,5 +194,40 @@
       margin: 100px auto;
     }
 
+    .sign-up-text {
+      margin-bottom: 30px;
+    }
+
+    .about-me-section {
+      display: flex;
+      justify-content: center;
+      width: 60%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .about-me-div {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+    }
+
+    .about-me-card {
+     margin: 80px auto;
+     text-align: center;
+     border: 2px solid white;
+     padding: 20px;
+
+    }
+
+    .about-me-section img {
+      width: 150px;
+    }
+
+    .about {
+      margin: auto;
+      margin-top: 30px;
+      text-align: center;
+    }
 
   }

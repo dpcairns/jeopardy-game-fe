@@ -128,7 +128,6 @@ label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-prof
   text-shadow: 2px 2px black;
 }
 
-
 /* sign up page*/
 .sign-up-form {
   margin: 100px auto;
@@ -148,7 +147,6 @@ label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-prof
 }
 
 /* gamepage */
-
 .game-page-button:active {
   transform: scale(.95)
 }
@@ -171,7 +169,6 @@ label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-prof
   text-align: center;
   text-shadow: 2px 2px black;
   transition: .3s
-
 }
 
 .leaderboard:active {
@@ -191,5 +188,38 @@ label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-prof
 .user-profile {
   margin: 100px auto;
 }
+
+.about-me-section {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+.about-me-div {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
+.about-me-card {
+ margin: 50px auto;
+ text-align: center;
+ border: 2px solid white;
+ padding: 20px;
+}
+
+.about-me-section img {
+  width: 150px;
+}
+
+.about {
+  margin: auto;
+  width: 60%;
+  margin-top: 30px;
+  text-align: center;
+}
+
 }
 
