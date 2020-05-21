@@ -36,7 +36,7 @@ export default class App extends Component {
                     <Switch>
 
                         <Route
-                            path="/"
+                            path="/jeopardy-game-fe/"
                             exact
                             render={(routerProps) => <LoginPage handleTokenChange={this.handleTokenChange} {...routerProps} />}                       
                         />
