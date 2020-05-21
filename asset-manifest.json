@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jeopardy-game-fe/static/css/main.e7b6b4f9.chunk.css",
-    "main.js": "/jeopardy-game-fe/static/js/main.5bfc1666.chunk.js",
-    "main.js.map": "/jeopardy-game-fe/static/js/main.5bfc1666.chunk.js.map",
+    "main.js": "/jeopardy-game-fe/static/js/main.de40e447.chunk.js",
+    "main.js.map": "/jeopardy-game-fe/static/js/main.de40e447.chunk.js.map",
     "runtime-main.js": "/jeopardy-game-fe/static/js/runtime-main.2f2f362a.js",
     "runtime-main.js.map": "/jeopardy-game-fe/static/js/runtime-main.2f2f362a.js.map",
     "static/js/2.2a4e2dd2.chunk.js": "/jeopardy-game-fe/static/js/2.2a4e2dd2.chunk.js",
     "static/js/2.2a4e2dd2.chunk.js.map": "/jeopardy-game-fe/static/js/2.2a4e2dd2.chunk.js.map",
     "index.html": "/jeopardy-game-fe/index.html",
-    "precache-manifest.76cc479b26466c002897949ab8e287e4.js": "/jeopardy-game-fe/precache-manifest.76cc479b26466c002897949ab8e287e4.js",
+    "precache-manifest.da83cc70dd8158c564845e8e61b865f8.js": "/jeopardy-game-fe/precache-manifest.da83cc70dd8158c564845e8e61b865f8.js",
     "service-worker.js": "/jeopardy-game-fe/service-worker.js",
     "static/css/main.e7b6b4f9.chunk.css.map": "/jeopardy-game-fe/static/css/main.e7b6b4f9.chunk.css.map",
     "static/js/2.2a4e2dd2.chunk.js.LICENSE.txt": "/jeopardy-game-fe/static/js/2.2a4e2dd2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2f2f362a.js",
     "static/js/2.2a4e2dd2.chunk.js",
     "static/css/main.e7b6b4f9.chunk.css",
-    "static/js/main.5bfc1666.chunk.js"
+    "static/js/main.de40e447.chunk.js"
   ]
 }
