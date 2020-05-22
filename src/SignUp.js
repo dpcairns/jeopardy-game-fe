@@ -20,7 +20,6 @@ export default class SignUp extends Component {
         this.props.history.push('./gamepage')
     }
     
-
     render() {
         return (
             <div>
