@@ -20,7 +20,7 @@ export default class ResultsPage extends Component {
     render() {
         return (
             <div className='results-box'>
-                <p> Score: { this.state.score }/10</p>
+                <p> Score: { this.state.score }/5</p>
                 <p> All-Time Score: { this.state.allTimeScore }</p>
                 <p> Games Played: { this.state.gamesPlayed }</p>
                 <button className='play-again-button' onClick={() => this.props.history.push('./gamepage')}>Again?</button>
