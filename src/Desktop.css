@@ -215,14 +215,13 @@
     }
 
     .about-me-card {
-     margin: 80px 50px;
-     text-align: center;
+      margin: 80px 50px;
+      text-align: center;
      border: 2px solid white;
      padding: 20px;
-
     }
 
-    .about-me-section img {
+    .pic {
       width: 200px;
     }
 
@@ -232,4 +231,14 @@
       text-align: center;
     }
 
+     .link-image {
+        width: 30px;
+        margin: 0px 10px;
+      }
+
+      .link-div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }  
   }
