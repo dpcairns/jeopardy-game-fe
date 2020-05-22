@@ -14,6 +14,7 @@ import Leaderboard from './Leaderboard.js'
 import DetailPage from './DetailPage'
 import './App.css'
 import './Desktop.css'
+import './Tablet.css'
 import './AboutMe.js'
 import AboutMe from './AboutMe.js';
 
