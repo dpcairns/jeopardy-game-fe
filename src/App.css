@@ -210,7 +210,7 @@ label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-prof
  padding: 20px;
 }
 
-.about-me-section img {
+ .pic {
   width: 150px;
 }
 
@@ -219,6 +219,15 @@ label, .sign-up-text, .current-game-data, .result-text, .results-box, .user-prof
   width: 60%;
   margin-top: 30px;
   text-align: center;
+}
+
+.link-image {
+  width: 30px;
+}
+
+.link-div {
+  display: flex;
+  align-items: flex-end;
 }
 
 }
