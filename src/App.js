@@ -35,10 +35,8 @@ export default class App extends Component {
         return (
             <div>
                 <Router>
-
                   <Header displayName = {this.state.displayName} handleTokenChange={this.handleTokenChange}/>
                     <Switch>
-
                         <Route
                             path="/"
                             exact
@@ -50,27 +48,22 @@ export default class App extends Component {
                             render={(routerProps) => <SignUp handleTokenChange={this.handleTokenChange} {...routerProps} />}
 
                         />
-
                         <Route
                             path="/leaderboard"
                             exact
                             render={(routerProps) => <Leaderboard  {...routerProps} />}
 
                         />
-
                         <Route
                             path="/detailpage/:id"
                             exact
                             render={(routerProps) => <DetailPage  {...routerProps} />}
-
                         />
                         <Route
                             path="/aboutme"
                             exact
                             render={(routerProps) => <AboutMe  {...routerProps} />}
-
                         />
-                        
                         <PrivateRoute
                             path="/gamepage"
                             token={this.state.token}
@@ -83,9 +76,7 @@ export default class App extends Component {
                             token={this.state.token}
                             displayName={this.state.displayName}                            
                             render={(routerProps) => <ResultsPage {...routerProps} />}
-
                         />
-
                     </Switch>
                 </Router>
             </div>
