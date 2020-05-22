@@ -10,3 +10,4 @@ export const getLeaderboard = async() => {
     .sort((a, b) => (b.total_score / b.games_played) - (a.total_score / a.games_played));
     return sortedData
 }
+

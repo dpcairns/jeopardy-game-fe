@@ -24,7 +24,12 @@ export default class AboutMe extends Component {
                             <div className={'about-me-card'}>
                                 <h2>Joey Leaptrott</h2>
                                 <img src="joey.jpg" alt="developer"/>
-                                <p>Joey needs to add his bio when he wants to.</p>
+                                <p>Joey enjoys gaming, sports, fitness, and getting to 
+                                    experiment with new recipes in the kitchen. While not 
+                                    enjoying a run in the rain or playing games, he is sharpening 
+                                    his coding skills to improve himself as a developer. 
+                                    His favorite sports teams are: the Portland Trailblazers, 
+                                    the Seattle Seahawks, and the Washington Huskies..</p>
                             </div>
                             
                             <div className={'about-me-card'}>

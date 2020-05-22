@@ -18,7 +18,7 @@ export default class Leaderboard extends Component {
             <div>
 
                 { this.state.leaderboardData.map(item => {
-                          return <div className='leaderboard'>
+                          return <div className='leaderboard' key={item.id}>
                               <Link to={`/detailpage/${item.id}`}> <p>{item.name} </p>                   
                                 <p> Games Played: {item.games_played} </p>
                                 <p> Total Score: {item.total_score} </p> 
