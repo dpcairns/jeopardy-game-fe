@@ -11,15 +11,12 @@ export default class LoginPage extends Component {
     
     handleSubmit = async(e) => {
         e.preventDefault();
-        console.log(typeof(this.state.email), typeof(this.state.password))
         let tokenData = await request.post(`https://enigmatic-springs-29291.herokuapp.com/auth/signin`, this.state)
         this.props.handleTokenChange(tokenData.body.token, tokenData.body.display_name)
         this.props.history.push('./gamepage')
     }
     
-
     render() {
-        // console.log(this.state)
         return (
             <div className='login-container'>
                 <div className='rules-container'>

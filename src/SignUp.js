@@ -22,7 +22,6 @@ export default class SignUp extends Component {
     
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <form className='sign-up-form' onSubmit={this.handleSubmit} >
@@ -38,11 +37,8 @@ export default class SignUp extends Component {
                         Username:
                         <input onChange={ (e)=> this.setState({display_name: e.target.value}) } ></input>
                     </label>
-
                     <button className='sign-up-button'>Sign Up</button>
-                   
                 </form>
-
             </div>
         )
     }

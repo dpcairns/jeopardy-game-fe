@@ -16,7 +16,6 @@ export default class Leaderboard extends Component {
     render() {
         return (
             <div>
-
                 { this.state.leaderboardData.map(item => {
                           return <div className='leaderboard' key={item.id}>
                               <Link to={`/detailpage/${item.id}`}> <p>{item.name} </p>                   
@@ -27,7 +26,6 @@ export default class Leaderboard extends Component {
                             </div>
                             }) 
                 }
-                
             </div>
         )
     }
