@@ -1,68 +1,69 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h1>The name of the project is Jeopardy Lite.</h1>
+<h3>Triple Jeopardy Members: Joey Leaptrott, Jake Pendergraft, and Dan Bennington</h3>
+<p>This project pulls questions from an API and displays them for the user to answer. Not a user? You can sign up. Signed out but want to play again? Use the login page and play again.</p>
 
-In the project directory, you can run:
 
-### `npm start`
+Credit for jeopdary questions API goes to @sottenad.
+Website: https://jservice.io/<br>
+API backend used: https://jservice.io/api/random?count=1
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h4>API endpoint with Sample Responses</h4>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+<p>The API route for the gamepage and player detail page uses password protection and needs a token for authorization. Example: https://enigmatic-springs-29291.herokuapp.com/api/results/<br>
+This end point will only show the users results which is on a protected route.<br>Sample Data:
+[
+    {
+        "id": 2,
+        "highest_score": 0,
+        "total_score": 81,
+        "games_played": 17,
+        "user_id": 12
+    }
+]
+*there is also a .put(updates player profile for this route) which initalizes on signup for players and sets all player stats to 0. 
+*there is a .put request which is uses this route to update score and games played upon completing  
+The leaderboard route is public and will display all user's stats.
+<br>Example: https://enigmatic-springs-29291.herokuapp.com/leaderboard<br>
+<p>Sample Data:
+[
+    {
+        "id": 7,
+        "total_score": 5,
+        "games_played": 2,
+        "name": "dave"
+    },
+    {
+        "id": 8,
+        "total_score": 7,
+        "games_played": 2,
+        "name": "bob"
+    },
+    {
+        "id": 9,
+        "total_score": 4,
+        "games_played": 2,
+        "name": "jim"
+    }
+]
+<p>Protected Login route: <br>https://enigmatic-springs-29291.herokuapp.com/auth/signin<br>
+<p>Sample data response: <br>
+{
+    "id": 13,
+    "email": "what@ever.com",
+    "display_name": "hello",
+    "token": "eyJhbGciOiJIUklajsdnR5cCI6IkpXVCJ9.eyJpZCI6MTIsImlhdCI6MTU5MDE2Mjg1N30.2ocZ41gWc4QVtumwFpkNETP5aJ_GM1LCTMPpgCGU2eI"
+}<br>
+<p>Protected signUp route: <br>https://enigmatic-springs-29291.herokuapp.com/auth/signup<br>
+<p>Sample data response: <br>
+{
+    "id": 45,
+    "email": "hello@world.com",
+    "display_name": "bob",
+    "token": "eyJhbGciOiJIUklajsdnR5cCI6IkpXVCJ9.eyJpZCI6MTIsImlhdCklj5MDE2Mjg1N30.2ocZ41gWc4QVtumwFpkNETP5aJ_GM1LCTMPpgCGU2eI"
+}<br>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<h2>Steps for build out:</h2>
+<p>Started building out with a signup page, once signup was built, it was linked to the backend. Once the signup page was finished, the login page was built out and linked up with the backend. A react router page for linking page was built out. The game page was built out (logic was improved over the next day), and linked with different API's (one for questions and the other for protected user stats). A results page for players was built and uses data from API to display how the player did. Afterwards, the leaderboard page was built and linked with backend API. An individual player's detail page was made which displays players stats. CSS was added and logic for the game was improved. CSS for desktop was also updated. Console logs and white space was edited to create a tidy app.  
