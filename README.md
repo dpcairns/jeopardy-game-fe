@@ -5,10 +5,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <p>This project pulls questions from an API and displays them for the user to answer. Not a user? You can sign up. Signed out but want to play again? Use the login page and play again.</p>
 
 
+Credit for jeopdary questions API goes to @sottenad.
+Website: https://jservice.io/<br>
+API backend used: https://jservice.io/api/random?count=1
+
 <h4>API endpoint with Sample Responses</h4>
 
 
-<p>The API has users using password protection and needs a token for authorization. Example: https://enigmatic-springs-29291.herokuapp.com/api/results/<br>
+<p>The API route for the gamepage and player detail page uses password protection and needs a token for authorization. Example: https://enigmatic-springs-29291.herokuapp.com/api/results/<br>
 This end point will only show the users results which is on a protected route.<br>Sample Data:
 [
     {
@@ -61,3 +65,5 @@ The leaderboard route is public and will display all user's stats.
     "token": "eyJhbGciOiJIUklajsdnR5cCI6IkpXVCJ9.eyJpZCI6MTIsImlhdCklj5MDE2Mjg1N30.2ocZ41gWc4QVtumwFpkNETP5aJ_GM1LCTMPpgCGU2eI"
 }<br>
 
+<h2>Steps for build out:</h2>
+<p>Started building out with a signup page, once signup was built, it was linked to the backend. Once the signup page was finished, the login page was built out and linked up with the backend. A react router page for linking page was built out. The game page was built out (logic was improved over the next day), and linked with different API's (one for questions and the other for protected user stats). A results page for players was built and uses data from API to display how the player did. Afterwards, the leaderboard page was built and linked with backend API. An individual player's detail page was made which displays players stats. CSS was added and logic for the game was improved. CSS for desktop was also updated. Console logs and white space was edited to create a tidy app.  
