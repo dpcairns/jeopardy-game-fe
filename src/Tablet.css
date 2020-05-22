@@ -210,21 +210,25 @@
       }
   
       .about-me-card {
-       margin: 80px auto;
+       margin: 80px 50px;
        text-align: center;
        border: 2px solid white;
        padding: 20px;
   
       }
   
-      .about-me-section img {
-        width: 150px;
+      .pic {
+        width: 200px;
       }
   
       .about {
         margin: auto;
         margin-top: 30px;
         text-align: center;
+      }
+
+      .link-image {
+        width: 30px;
       }
 
 
